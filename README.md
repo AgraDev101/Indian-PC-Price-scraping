@@ -1,8 +1,10 @@
-# Indian-PC-Price-scraping
+# Indian PC Price scraping
+
+Site scraped mdcomputers.in and primeabgb.com
 
 Python script
 
-package requirement
+package requirements:
 
 BeautifulSoup
 requests
