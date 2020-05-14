@@ -32,7 +32,7 @@ def Prime_CPU(page_from, page_to):
 
 	print("Total " + str(len(data)) + " entries found")
 	df = pd.DataFrame(data)
-	df.to_csv("PrimeABGB_CPU_price.csv")
+	df.to_csv("PrimeABGB_CPU_price.csv", index = False)
 
 def Prime_GPU(page_from, page_to):
 	data = []
@@ -61,7 +61,7 @@ def Prime_GPU(page_from, page_to):
 
 	print("Total " + str(len(data)) + " entries found")
 	df = pd.DataFrame(data)
-	df.to_csv("PrimeABGB_GPU_price.csv")
+	df.to_csv("PrimeABGB_GPU_price.csv", index = False)
 
 def Prime_RAM(page_from, page_to):
 	data = []
@@ -90,4 +90,4 @@ def Prime_RAM(page_from, page_to):
 
 	print("Total " + str(len(data)) + " entries found")
 	df = pd.DataFrame(data)
-	df.to_csv("PrimeABGB_RAM_price.csv")
+	df.to_csv("PrimeABGB_RAM_price.csv", index = False)

@@ -32,7 +32,7 @@ def MD_CPU(page_from, page_to):
 
 	print("Total " + str(len(data)) + " entries found")
 	df2 = pd.DataFrame(data)
-	df2.to_csv("MDComputers_CPU_price.csv")
+	df2.to_csv("MDComputers_CPU_price.csv", index = False)
 
 def MD_GPU(page_from, page_to):
 	data = []
@@ -61,7 +61,7 @@ def MD_GPU(page_from, page_to):
 
 	print("Total " + str(len(data)) + " entries found")
 	df2 = pd.DataFrame(data)
-	df2.to_csv("MDComputers_GPU_price.csv")
+	df2.to_csv("MDComputers_GPU_price.csv", index = False)
 
 def MD_RAM(page_from, page_to):
 	data = []
@@ -90,4 +90,4 @@ def MD_RAM(page_from, page_to):
 
 	print("Total " + str(len(data)) + " entries found")
 	df2 = pd.DataFrame(data)
-	df2.to_csv("MDComputers_RAM_price.csv")
+	df2.to_csv("MDComputers_RAM_price.csv", index = False)
