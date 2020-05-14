@@ -21,7 +21,7 @@ Fetched data info
 
 Saved files
 
-![fetched](https://raw.githubusercontent.com/AgraDev101/Indian-PC-Price-scraping/master/sample_img_fatched-data/scrap3.png)
+![saved](https://raw.githubusercontent.com/AgraDev101/Indian-PC-Price-scraping/master/sample_img_fatched-data/scrap3.png)
 
 
 
