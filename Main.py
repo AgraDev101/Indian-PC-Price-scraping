@@ -6,30 +6,33 @@ from fake_useragent import UserAgent
 from mdcomputers_data import MD_CPU
 from mdcomputers_data import MD_GPU
 from mdcomputers_data import MD_RAM
+from prime_data import Prime_CPU
+from prime_data import Prime_GPU
+from prime_data import Prime_RAM
 
-def prime_gpu(a,b):
+def prime_gpu(page_from, page_to):
 	print("\nscraping...")
-	return print(a+b)
+	Prime_GPU(page_from, page_to)
 
-def prime_cpu(a,b):
+def prime_cpu(page_from, page_to):
 	print("\nscraping...")
-	return print(a+b)
+	Prime_CPU(page_from, page_to)
 
-def prime_ram(a,b):
+def prime_ram(page_from, page_to):
 	print("\nscraping...")
-	return print(a+b)
+	Prime_RAM(page_from, page_to)
 
-def md_gpu(a,b):
+def md_gpu(page_from, page_to):
 	print("\nscraping...")
-	return print(a+b)
+	MD_GPU(page_from, page_to)
 
 def md_cpu(page_from, page_to):
 	print("\nscraping...")
 	MD_CPU(page_from, page_to)
 
-def md_ram(a,b):
+def md_ram(page_from, page_to):
 	print("\nscraping...")
-	return print(a+b)
+	MD_RAM(page_from, page_to)
 
 
 while True:
