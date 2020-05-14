@@ -7,8 +7,11 @@ Python script
 package requirements:
 
 BeautifulSoup
+
 requests
+
 pandas
+
 fake_useragent
 
 Selecting options
