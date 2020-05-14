@@ -6,13 +6,10 @@ Python script
 
 package requirements:
 
-BeautifulSoup
-
-requests
-
-pandas
-
-fake_useragent
+* BeautifulSoup
+* requests
+* pandas
+* fake_useragent
 
 Selecting options
 ![selecting option](https://raw.githubusercontent.com/AgraDev101/Indian-PC-Price-scraping/master/sample_img_fatched-data/scrape1.png)
