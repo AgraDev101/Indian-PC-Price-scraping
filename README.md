@@ -1,4 +1,4 @@
-# Indian PC Price scraping
+# Indian PC Component Price scraping
 
 Site scraped mdcomputers.in and primeabgb.com
 
