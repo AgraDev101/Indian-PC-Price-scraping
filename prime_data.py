@@ -18,13 +18,13 @@ def Prime_CPU(page_from, page_to):
 			d = {}
 			try:
 				name = info.find("h3").text
-				d["CPU_Name"] = name
+				d["CPU_Name"] = str(name.replace("®", "").replace("™", ""))
 			except:
 				d["CPU_Name"] = None
 				
 			try:
 				price = info.find("ins").text
-				d["Price"] = price
+				d["Price"] = int(price.replace("₹", "").replace(",", ""))
 			except:
 				d["Price"] = None
 
@@ -47,13 +47,13 @@ def Prime_GPU(page_from, page_to):
 			d = {}
 			try:
 				name = info.find("h3").text
-				d["GPU_Name"] = name
+				d["GPU_Name"] = str(name.replace("®", "").replace("™", ""))
 			except:
 				d["GPU_Name"] = None
 				
 			try:
 				price = info.find("ins").text
-				d["Price"] = price
+				d["Price"] = int(price.replace("₹", "").replace(",", ""))
 			except:
 				d["Price"] = None
 
@@ -76,13 +76,13 @@ def Prime_RAM(page_from, page_to):
 			d = {}
 			try:
 				name = info.find("h3").text
-				d["RAM_Name"] = name
+				d["RAM_Name"] = str(name.replace("®", "").replace("™", ""))
 			except:
 				d["RAM_Name"] = None
 				
 			try:
 				price = info.find("ins").text
-				d["Price"] = price
+				d["Price"] = int(price.replace("₹", "").replace(",", ""))
 			except:
 				d["Price"] = None
 

@@ -18,13 +18,13 @@ def MD_CPU(page_from, page_to):
 			d = {}
 			try:
 				name = info.find("a").text
-				d["CPU_Name"] = name
+				d["CPU_Name"] = str(name.replace("®", "").replace("™", ""))
 			except:
 				d["CPU_Name"] = None
 			
 			try:
 				price = info.find("span", {"class", "price-new"}).text
-				d["Price"] = price
+				d["Price"] = int(price.replace("₹", "").replace(",", ""))
 			except:
 				d["Price"] = None
 			
@@ -47,13 +47,13 @@ def MD_GPU(page_from, page_to):
 			d = {}
 			try:
 				name = info.find("a").text
-				d["GPU_Name"] = name
+				d["GPU_Name"] = str(name.replace("®", "").replace("™", ""))
 			except:
 				d["GPU_Name"] = None
 			
 			try:
 				price = info.find("span", {"class", "price-new"}).text
-				d["Price"] = price
+				d["Price"] = int(price.replace("₹", "").replace(",", ""))
 			except:
 				d["Price"] = None
 			
@@ -76,13 +76,13 @@ def MD_RAM(page_from, page_to):
 			d = {}
 			try:
 				name = info.find("a").text
-				d["RAM_Name"] = name
+				d["RAM_Name"] = str(name.replace("®", "").replace("™", ""))
 			except:
 				d["RAM_Name"] = None
 			
 			try:
 				price = info.find("span", {"class", "price-new"}).text
-				d["Price"] = price
+				d["Price"] = int(price.replace("₹", "").replace(",", ""))
 			except:
 				d["Price"] = None
 			
