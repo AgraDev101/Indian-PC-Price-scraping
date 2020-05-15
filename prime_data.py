@@ -3,7 +3,9 @@ import requests
 import io
 import pandas as pd
 from fake_useragent import UserAgent
+from datetime import date
 
+d1 = date.today().strftime("%d-%m-%Y")
 
 def Prime_CPU(page_from, page_to):
 	data = []
@@ -32,7 +34,7 @@ def Prime_CPU(page_from, page_to):
 
 	print("Total " + str(len(data)) + " entries found")
 	df = pd.DataFrame(data)
-	df.to_csv("PrimeABGB_CPU_price.csv", index = False)
+	df.to_csv("PrimeABGB_CPU_price_{}.csv".format(d1), index = False)
 
 def Prime_GPU(page_from, page_to):
 	data = []
@@ -61,7 +63,7 @@ def Prime_GPU(page_from, page_to):
 
 	print("Total " + str(len(data)) + " entries found")
 	df = pd.DataFrame(data)
-	df.to_csv("PrimeABGB_GPU_price.csv", index = False)
+	df.to_csv("PrimeABGB_GPU_price_{}.csv".format(d1), index = False)
 
 def Prime_RAM(page_from, page_to):
 	data = []
@@ -90,4 +92,4 @@ def Prime_RAM(page_from, page_to):
 
 	print("Total " + str(len(data)) + " entries found")
 	df = pd.DataFrame(data)
-	df.to_csv("PrimeABGB_RAM_price.csv", index = False)
+	df.to_csv("PrimeABGB_RAM_price_{}.csv".format(d1), index = False)
