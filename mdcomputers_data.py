@@ -3,6 +3,7 @@ import requests
 import io
 import pandas as pd
 from fake_useragent import UserAgent
+from datetime import date
 
 d1 = date.today().strftime("%d-%m-%Y")
 
