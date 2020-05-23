@@ -12,7 +12,9 @@ def Prime_CPU(page_from, page_to):
 	for page in range(page_from, page_to, 1):
 		ua = UserAgent()
 		base_url = "https://www.primeabgb.com/buy-online-price-india/cpu-processor/page/"
-		res = requests.get((base_url + str(page) + "/"), headers={'User-Agent': ua.chrome})
+		res = requests.get((base_url + str(page) + "/"
+		+"?pa-_stock_status=instock"
+		), headers={'User-Agent': ua.chrome})
 		cont = res.content
 		soup = BeautifulSoup(cont, "html.parser")
 		
@@ -28,7 +30,12 @@ def Prime_CPU(page_from, page_to):
 				price = info.find("ins").text
 				d["Price"] = int(price.replace("₹", "").replace(",", ""))
 			except:
-				d["Price"] = None
+				try:
+					price = info.find("span","price").text
+					d["Price"] = int(price.replace("₹", "").replace(",", ""))
+				except:
+					d["Price"] = None
+
 
 			data.append(d)
 
@@ -41,7 +48,9 @@ def Prime_GPU(page_from, page_to):
 	for page in range(page_from, page_to, 1):
 		ua = UserAgent()
 		base_url = "https://www.primeabgb.com/buy-online-price-india/graphic-cards-gpu/page/"
-		res = requests.get((base_url + str(page) + "/"), headers={'User-Agent': ua.chrome})
+		res = requests.get((base_url + str(page) + "/"
+		+"?pa-_stock_status=instock"
+		), headers={'User-Agent': ua.chrome})
 		cont = res.content
 		soup = BeautifulSoup(cont, "html.parser")
 		
@@ -57,7 +66,11 @@ def Prime_GPU(page_from, page_to):
 				price = info.find("ins").text
 				d["Price"] = int(price.replace("₹", "").replace(",", ""))
 			except:
-				d["Price"] = None
+				try:
+					price = info.find("span","price").text
+					d["Price"] = int(price.replace("₹", "").replace(",", ""))
+				except:
+					d["Price"] = None
 
 			data.append(d)
 
@@ -70,7 +83,9 @@ def Prime_RAM(page_from, page_to):
 	for page in range(page_from, page_to, 1):
 		ua = UserAgent()
 		base_url = "https://www.primeabgb.com/buy-online-price-india/ram-memory/page/"
-		res = requests.get((base_url + str(page) + "/"), headers={'User-Agent': ua.chrome})
+		res = requests.get((base_url + str(page) + "/"
+		+"?pa-_stock_status=instock"
+		), headers={'User-Agent': ua.chrome})
 		cont = res.content
 		soup = BeautifulSoup(cont, "html.parser")
 		
@@ -86,7 +101,11 @@ def Prime_RAM(page_from, page_to):
 				price = info.find("ins").text
 				d["Price"] = int(price.replace("₹", "").replace(",", ""))
 			except:
-				d["Price"] = None
+				try:
+					price = info.find("span","price").text
+					d["Price"] = int(price.replace("₹", "").replace(",", ""))
+				except:
+					d["Price"] = None
 
 			data.append(d)
 
