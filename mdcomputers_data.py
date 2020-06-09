@@ -4,6 +4,7 @@ import io
 import pandas as pd
 from fake_useragent import UserAgent
 from datetime import date
+from sys import stdout
 
 d1 = date.today().strftime("%d-%m-%Y")
 
@@ -32,7 +33,11 @@ def MD_CPU(page_from, page_to):
 			
 			data.append(d)
 
-	print("Total " + str(len(data)) + " entries found")
+			stdout.write("\r{}".format("Total " + str(len(data)) + " products added"))
+			stdout.flush()
+
+	stdout.write("\n")
+	# print("Total " + str(len(data)) + " entries found")
 	df2 = pd.DataFrame(data)
 	df2.to_csv("MDComputers_CPU_price_{}.csv".format(d1), index = False)
 
@@ -61,7 +66,10 @@ def MD_GPU(page_from, page_to):
 			
 			data.append(d)
 
-	print("Total " + str(len(data)) + " entries found")
+			stdout.write("\r{}".format("Total " + str(len(data)) + " products added"))
+			stdout.flush()
+			
+	stdout.write("\n")
 	df2 = pd.DataFrame(data)
 	df2.to_csv("MDComputers_GPU_price_{}.csv".format(d1), index = False)
 
@@ -90,6 +98,9 @@ def MD_RAM(page_from, page_to):
 			
 			data.append(d)
 
-	print("Total " + str(len(data)) + " entries found")
+			stdout.write("\r{}".format("Total " + str(len(data)) + " products added"))
+			stdout.flush()
+			
+	stdout.write("\n")
 	df2 = pd.DataFrame(data)
 	df2.to_csv("MDComputers_RAM_price_{}.csv".format(d1), index = False)
